@@ -19,6 +19,8 @@
             color: #153F0B;
             max-width: 800px;
             margin: 0 auto;
+            padding: 16px;
+            display: flex;
            }
            img{
             width: 150px;
@@ -33,11 +35,45 @@
             <h1>Meu blog tech</h1>
             <p>Vou compartilhar conhecimentos sobre mundo torajo.</p>
         </header>
-        <img src="imagem- blog.png" alt="Ilustração em estilo cartoon de uma maçã verde com folha no topo e contornos pretos. O texto "MUNDO TORAJO" está escrito em letras maiúsculas azuis sobre a maçã. No canto inferior direito, há pequenos detalhes decorativos em tons de verde e roxo.">
         <main>
-            <h2>Meu primeiro post</h2>
-            <p>Por: Vitória Moura</p>
-            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar coisas e curiosidades sobre Mundo Torajo.</p>
+        <img src="imagem- blog.png" alt="Ilustração em estilo cartoon de uma maçã verde com folha no topo e contornos pretos. O texto "MUNDO TORAJO" está escrito em letras maiúsculas azuis sobre a maçã. No canto inferior direito, há pequenos detalhes decorativos em tons de verde e roxo.">
+            <div>
+
+                <h2>Meu primeiro post</h2>
+                <p>Por: Vitória Moura</p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar coisas e curiosidades sobre Mundo Torajo.</p>
+                <button>🍏 <span>0</span></button>
+                <button>🍎 <span>0</span></button>
+            </div>
+            <div>
+                <img src="imagem- blog.png" alt="Ilustração em estilo cartoon de uma maçã verde com folha no topo e contornos pretos. O texto "MUNDO TORAJO" está escrito em letras maiúsculas azuis sobre a maçã. No canto inferior direito, há pequenos detalhes decorativos em tons de verde e roxo.">
+                <h2>Meu segundo post</h2>
+                <p>Por: Vitória Moura</p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar coisas e curiosidades sobre Mundo Torajo.</p>
+                <button>🍏 <span>0</span></button>
+                <button>🍎 <span>0</span></button>
+            </div>
         </main>
     </body>
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function(botao){
+            let curtiu = false;
+            botao.addEventListener("click", botaoClicado);
+            function botaoClicado(){
+                console.log("fui clicado");
+                let texto = botao.querySelectorAll("span");
+                if(curtiu === false){
+                    texto.textContent++;
+                    curtiu = true;
+                } else{
+                    textContent--;
+                    curtiu = false;
+                }
+            }
+
+        })
+
+    </script>
 </html>
