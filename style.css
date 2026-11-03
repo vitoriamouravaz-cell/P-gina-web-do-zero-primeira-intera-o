@@ -12,9 +12,12 @@ header{
   color: #153F0B;
   max-width: 800px;
   margin: 0 auto;
-  padding: 16px;
-  display: flex;
- }
+  padding: 16px;}
+
+  article{
+    display: flex;
+  }
+ 
  img{
   width: 150px;
   height: 150px;
